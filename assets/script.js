@@ -57,7 +57,20 @@ timerEl.textContent = time;
 }, 1000);
 
 // look into setAttribute and removeAttribute to add and remove the hide class
+questions.removeAttribute("class")
+startcontainer.setAttribute("class", "hide")
+showQuestions()
+}
 
-}lki3.;lvgbhgb
+function showQuestions(){
+    var currentQuestion = questionArr[index]
+    question.textContent = currentQuestion.question
+    for (let i = 0; i < currentQuestion.answers.length; i++) {
+        var btn = document.createElement("button")
+        btn.textContent = currentQuestion.answers[i]
+        questionbutton.append(btn)
+    }
+}
+//on click instead of event listener
 //event listeners
 startbutton.addEventListener('click', start)
